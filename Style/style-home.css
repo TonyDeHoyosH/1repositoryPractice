@@ -5,42 +5,61 @@ html {
     scroll-behavior: smooth; 
 }
 
-.content-nav{
+
+/*Cambio de navbar mal estructurado*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #1a1a1a;
+}
+
+.header {
     position: fixed;
-    display: flex;
-    top: 0;
-    left: 0;
     width: 100%;
-    align-self: center;
-    
-}
-.nav-elements{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding: 5px 3rem;
-    align-items: center;
-
-}
-
-.element-enlaces a{
-    display: inline-block;
-    font-family:'Roboto', sans-serif;
-    text-decoration: none;
-    color: #FCEA2B;
-    padding: 10px 40px;
-    margin: 0px 10px;
-    font-size: 1.5rem;
-    border-radius: 15px;
-    border: solid 1px transparent;
-    transition: all 0.3s ease;
-}
-.element-enlaces a:hover{
     background-color: #0C0C0C;
-    border: solid 1px #FCEA2B;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0C0C0C;
+    padding: 1rem 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.navbar__logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.navbar__nav {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar__link {
+    font-family: 'Roboto', sans-serif;
+    color: #FCEA2B;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.8rem 1.1rem;
+    border: 2px solid transparent;
     border-radius: 15px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
 
-
+.navbar__link:hover {
+    background-color: #0C0C0C;
+    border-color: #FCEA2B;
 }
 
 
@@ -55,7 +74,7 @@ html {
 }
 
 .hero-text{
-    width: 40%;
+    width: 50%;
     padding-left: 8%;
     padding-top: 10%;
 }
@@ -65,6 +84,7 @@ html {
     font-size: 5rem;
     display: block;
     width: 100%;
+    padding-bottom: 40px;
 }
 
 .hero-text p{
@@ -74,6 +94,7 @@ html {
     color: white;
     display: block;
     width: 100%;
+    padding-bottom: 40px;
 }
 
 .hero-text button{

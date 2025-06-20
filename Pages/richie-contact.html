@@ -7,18 +7,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="../Style/richie-contact.css">
 </head>
 <body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="navbar__logo">
+                <img src="../Assets/imgToño/logo.png" alt="Logo de la empresa" class="navbar__logo-img">
+            </a>
+            <ul class="navbar__nav">
+                <li class="navbar__item">
+                    <a href="../Pages/home-toño.html" class="navbar__link">Home</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="../Pages/home-toño.html" class="navbar__link">About</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="../Pages/richie-review.html" class="navbar__link">Review</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="../Pages/richie-contact.html" class="navbar__link">Contact us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <section class="contact-section">
             <div class="contact-section__content">
                 <h1 class="contact-section__title">CONTACT <span class="contact-section__title--gold">US</span></h1>
                 
-                <form  id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-
+                <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
                     <input type="hidden" name="access_key" value="ecab4880-0236-4032-8c43-611b2bade29d">
                     <input type="hidden" name="subject" value="New Contact">
                     <input type="hidden" name="from_name" value="My Website">
@@ -36,7 +60,7 @@
                         <input class="contact-form__input" type="text" id="phone" name="phone" placeholder="Enter your phone number (optional)">
                     </div>
                     <div class="contact-form__group">
-                        <label class="contact-form__label" for="message">YOUR MENSSAGE</label>
+                        <label class="contact-form__label" for="message">YOUR MESSAGE</label>
                         <textarea class="contact-form__input" id="message" name="message" placeholder="Type your message here..." required></textarea>
                     </div>
 

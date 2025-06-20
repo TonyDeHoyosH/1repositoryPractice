@@ -4,7 +4,7 @@
     --font-body: 'Roboto', sans-serif;
     --color-gold: #E0C55F;
     --color-text-light: #f0f0f0;
-    --color-background-dark: #0F0F0F;
+    --color-background-dark: #000000;
 }
 
 * {
@@ -25,6 +25,51 @@ body {
     line-height: 1.6;
 }
 
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: #000000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-background-dark);
+    padding: 0.8rem 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.navbar__logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.navbar__nav {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar__link {
+    font-family: 'Roboto', sans-serif;
+    color: #FCEA2B;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.8rem 1.1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar__link:hover {
+    background-color: #0C0C0C;
+    border-color: #FCEA2B;
+}
+
+
 /* --- Estructura Principal --- */
 .business-section {
     display: flex;
@@ -36,6 +81,7 @@ body {
 .image-column {
     flex: 1 1 40%;
     position: relative;
+    z-index: -1;
     overflow: hidden;
 }
 
