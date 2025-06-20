@@ -1,0 +1,156 @@
+/* --- Reseteo Básico y Variables --- */
+:root {
+    --font-title: 'Italiana', serif;
+    --font-body: 'Roboto', sans-serif;
+    --color-gold: #E0C55F;
+    --color-text-light: #f0f0f0;
+    --color-background-dark: #0F0F0F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Mejora el comportamiento del scroll */
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+/* --- Estructura Principal --- */
+.business-section {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* --- Columna de la Imagen --- */
+.image-column {
+    flex: 1 1 40%;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- Columna del Contenido --- */
+.content-column {
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    /* --- ¡CAMBIO CLAVE PARA CENTRAR! --- */
+    align-items: center; /* Centra los elementos (bloques) horizontalmente */
+    text-align: center;  /* Centra el texto dentro de los elementos */
+    
+    /* --- ¡CAMBIO CLAVE PARA RESPONSIVIDAD! --- */
+    /* Padding fluido: se adapta entre 2rem, 6vw y 5rem */
+    padding: clamp(2rem, 6vw, 5rem) clamp(1.5rem, 8vw, 6rem);
+}
+
+/* --- Tipografía Fluida --- */
+.main-title {
+    font-family: var(--font-title);
+    color: var(--color-gold);
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    /* Tamaño de fuente fluido: mínimo 2.5rem, ideal 5vw, máximo 3.5rem */
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.subtitle {
+    font-family: var(--font-title);
+    color: var(--color-gold);
+    font-weight: 400;
+    margin-bottom: 2rem;
+    /* Tamaño de fuente fluido: mínimo 1.8rem, ideal 4vw, máximo 2.5rem */
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.description {
+    /* Tamaño de fuente fluido para mejor lectura en móviles */
+    font-size: clamp(0.95rem, 2vw, 1.05rem);
+    max-width: 550px;
+    margin-bottom: 5rem;
+}
+
+.differentiator-title {
+    font-family: var(--font-title);
+    font-weight: 400;
+    color: var(--color-text-light);
+    margin-bottom: 2rem;
+    /* Tamaño de fuente fluido */
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+}
+
+/* --- Sección de Características --- */
+.features-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    /* Espacio fluido entre los items */
+    gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.feature-item {
+    flex: 1; /* Permite que crezcan pero sin encogerse más de su contenido */
+    max-width: 220px; /* Limita el ancho máximo de cada item */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.feature-item .icon {
+    color: var(--color-gold);
+}
+
+.feature-item p {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+/* ================================================= */
+/* ---             DISEÑO RESPONSIVO             --- */
+/* ================================================= */
+
+/* TABLETS Y MÓVILES GRANDES (hasta 1024px) */
+@media (max-width: 1024px) {
+    .features-container {
+        /* Permite que los items se envuelvan a la siguiente línea si no caben */
+        flex-wrap: wrap;
+    }
+}
+
+/* MÓVILES (hasta 768px) */
+@media (max-width: 768px) {
+    .business-section {
+        /* Apila las columnas verticalmente */
+        flex-direction: column;
+    }
+
+    .image-column {
+        flex: none; /* Resetea el crecimiento flexible */
+        height: 50vh; /* Ocupa la mitad de la altura de la pantalla del móvil */
+    }
+
+    .features-container {
+        /* Apila las características en una sola columna */
+        flex-direction: column;
+        align-items: center; /* Las centra en el contenedor */
+    }
+}
